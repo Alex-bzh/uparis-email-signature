@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configurateur signature mail</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/bootstrap-4.4.1-dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Signature mail <small class="text-muted">– Université de Paris</small></h1>
+            <div class="row">
+                <div class="col-md">
+                    <h2>Composition</h2>
+                    <form action="make-signature.php" method="post">
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <input type="text" class="form-control" placeholder="Prénom" id="givenName" name="givenName" required="required" v-model="givenName" />
+                            </div>
+                            <div class="col-sm">
+                                <input type="text" class="form-control" placeholder="Nom" id="familyName" name="familyName" required="required" v-model="familyName" />
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Fonction" id="jobTitle" name="jobTitle" v-model="jobTitle" />
+                            </div>
+                        </div>
+                        <div class="form-group row mt-3">
+                            <div class="col-sm-3">Logos :</div>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="uparis" v-model="logoUParis" checked="checked" name="logos[uparis]" />
+                                    <label class="form-check-label" for="uparis">
+                                        Université de Paris
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="llf" v-model="logoLLF" name="logos[llf]" />
+                                    <label class="form-check-label" for="llf">
+                                        Laboratoire de linguistique formelle
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cnrs" v-model="logoCNRS" name="logos[cnrs]" />
+                                    <label class="form-check-label" for="cnrs">
+                                        Centre national de la recherche scientifique
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <input type="tel" class="form-control" placeholder="Téléphone" id="telephone" name="telephone" v-model="telephone" />
+                            </div>
+                            <div class="col-sm">
+                                <input type="tel" class="form-control" placeholder="Fax" id="faxNumber" name="faxNumber" v-model="faxNumber" />
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col text-right">
+                                <button class="btn btn-primary" type="submit">Télécharger</button>
+                                <button class="btn btn-danger" type="reset" @click="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md">
+                    <h2 class="text-center">Visualisation</h2>
+                    <div style="font-size:11pt;font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;margin:0 0 .5em;line-height:1.3em;">
+                        <div>
+                            <strong v-show="!givenName">Prénom</strong>
+                            <strong>{{ givenName }}</strong>
+                            <strong v-show="!familyName">Nom</strong>
+                            <strong>{{ familyName }}</strong>
+                        </div>
+                        <div>Laboratoire de linguistique formelle</div>
+                        <div v-show="jobTitle">{{ jobTitle }}</div>
+                        <div>Université de Paris, LLF, CNRS</div>
+                        <a href="http://www.llf.cnrs.fr" itemprop="url">http://www.llf.cnrs.fr</a>
+                        <div v-show="telephone">
+                            <strong>Tél. :</strong> <span itemprop="telephone">{{ telephone }}</span>
+                        </div>
+                        <div v-show="faxNumber">
+                            <strong>Fax :</strong> <span itemprop="fax">{{ faxNumber }}</span>
+                        </div>
+                    </div>
+                    <figure v-show="logoUParis | logoLLF | logoCNRS" class="figure">
+                        <a v-show="logoUParis" href="https://www.u-paris.fr/" target="_blank">
+                            <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-web.png" class="figure-img" height="70" alt="Logo de l’université de Paris" />
+                        </a>
+                        <a v-show="logoLLF" href="http://www.llf.cnrs.fr" target="_blank">
+                            <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/web-1024-transparent.png" class="figure-img" height="55" alt="Logo du Laboratoire de linguistique formelle" />
+                        </a>
+                        <a v-show="logoCNRS" href="http://www.cnrs.fr" class="ml-2" target="_blank">
+                            <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/cnrs_rvb.png" class="figure-img" height="60" alt="Logo du Centre national de la recherche scientifique" />
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vuejs/vue.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

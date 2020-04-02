@@ -1,4 +1,4 @@
-# uparis-mail-signature
+# University of Paris email signature
 
 This small Web application makes it possible to customize your University of Paris email signature.
 

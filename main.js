@@ -10,7 +10,10 @@ let app = new Vue({
         logoUParis: true,
         logoLLF: false,
         logoCNRS: false,
-        errors: []
+        facebook: false,
+        instagram: false,
+        twitter: false,
+        youtube: false
     },
     methods: {
         reset: function() {
@@ -21,7 +24,11 @@ let app = new Vue({
             this.faxNumber = null,
             this.logoUParis = true,
             this.logoLLF = false,
-            this.logoCNRS = false
+            this.logoCNRS = false,
+            this.facebook = false,
+            this.instagram = false,
+            this.twitter = false,
+            this.youtube = false
         }
     }
 });

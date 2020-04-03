@@ -27,9 +27,17 @@
                                 <input type="text" class="form-control" placeholder="Fonction" id="jobTitle" name="jobTitle" v-model="jobTitle" />
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <div class="col-sm">
+                                <input type="tel" class="form-control" placeholder="Téléphone" id="telephone" name="telephone" v-model="telephone" />
+                            </div>
+                            <div class="col-sm">
+                                <input type="tel" class="form-control" placeholder="Fax" id="faxNumber" name="faxNumber" v-model="faxNumber" />
+                            </div>
+                        </div>
                         <div class="form-group row mt-3">
-                            <div class="col-sm-3">Logos :</div>
-                            <div class="col-sm-9">
+                            <div class="col-sm-4">Logos :</div>
+                            <div class="col-sm-8">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="uparis" v-model="logoUParis" checked="checked" name="logos[uparis]" />
                                     <label class="form-check-label" for="uparis">
@@ -50,12 +58,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-sm">
-                                <input type="tel" class="form-control" placeholder="Téléphone" id="telephone" name="telephone" v-model="telephone" />
-                            </div>
-                            <div class="col-sm">
-                                <input type="tel" class="form-control" placeholder="Fax" id="faxNumber" name="faxNumber" v-model="faxNumber" />
+                        <div class="form-group row mt-3">
+                            <div class="col-sm-4">Réseaux sociaux :</div>
+                            <div class="col-sm-8">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="facebook" v-model="facebook" name="RZO[facebook]" />
+                                    <label class="form-check-label" for="facebook">
+                                        Facebook
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="instagram" v-model="instagram" name="RZO[instagram]" />
+                                    <label class="form-check-label" for="instagram">
+                                        Instagram
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="twitter" v-model="twitter" name="RZO[twitter]" />
+                                    <label class="form-check-label" for="twitter">
+                                        Twitter
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="youtube" v-model="youtube" name="RZO[youtube]" />
+                                    <label class="form-check-label" for="youtube">
+                                        Youtube
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-3">
@@ -86,7 +115,7 @@
                             <strong>Fax :</strong> <span itemprop="fax">{{ faxNumber }}</span>
                         </div>
                     </div>
-                    <figure v-show="logoUParis | logoLLF | logoCNRS" class="figure">
+                    <figure class="figure m-0">
                         <a v-show="logoUParis" href="https://www.u-paris.fr/" target="_blank">
                             <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-web.png" class="figure-img" height="70" alt="Logo de l’université de Paris" />
                         </a>
@@ -95,6 +124,20 @@
                         </a>
                         <a v-show="logoCNRS" href="http://www.cnrs.fr" class="ml-2" target="_blank">
                             <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/cnrs_rvb.png" class="figure-img" height="60" alt="Logo du Centre national de la recherche scientifique" />
+                        </a>
+                    </figure>
+                    <figure class="figure d-block m-0">
+                        <a v-show="facebook" href="https://www.facebook.com/univparis/" target="_blank">
+                            <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_FB_rouge.png" class="figure-img" alt="Pictogramme Facebook" />
+                        </a>
+                        <a v-show="instagram" href="https://www.instagram.com/univ_paris/?hl=fr" target="_blank">
+                            <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Insta_rouge.png" class="figure-img" alt="Pictogramme Instagram" />
+                        </a>
+                        <a v-show="twitter" href="https://twitter.com/Univ_Paris" target="_blank">
+                            <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Twt_rouge.png" class="figure-img" alt="Pictogramme Twitter" />
+                        </a>
+                        <a v-show="youtube" href="https://www.youtube.com/channel/UC5WhlXe1I_eRCtEx7cj3ZKg?fbclid=IwAR1vwGdU3uTudr9xzGkiXoNdg0tlasAeDl2lkkTP-cyEP_snhPMfdU_Oc9w" target="_blank">
+                            <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Yt_rouge.png" class="figure-img" alt="Pictogramme Youtube" />
                         </a>
                     </figure>
                 </div>

@@ -1,6 +1,6 @@
 # University of Paris email signature
 
-This small Web application makes it possible to customize your University of Paris email signature.
+This small Web application makes it possible to customize your University of Paris email signature. It is compatible with the microdata vocabulary schema *Person* by Schema.org.
 
 ## How does it work?
 

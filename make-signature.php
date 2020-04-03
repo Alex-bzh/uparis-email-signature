@@ -7,6 +7,7 @@ $jobTitle = filter_input(INPUT_POST, 'jobTitle', FILTER_SANITIZE_SPECIAL_CHARS);
 $telephone = filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_SPECIAL_CHARS);
 $faxNumber = filter_input(INPUT_POST, 'faxNumber', FILTER_SANITIZE_SPECIAL_CHARS);
 $logos = $_POST['logos'];
+$RZO = $_POST['RZO'];
 
 // Conditional fields
 $f_jobTitle = ($jobTitle) ? '<span itemprop="jobTitle">' . $jobTitle . '</span><br />' : '';
@@ -25,6 +26,22 @@ $f_logo_llf = ($logos['llf']) ? '
 $f_logo_cnrs = ($logos['cnrs']) ? '
     <a href="http://www.cnrs.fr" style="display:inline-block;vertical-align:middle;margin-left:1em;">
         <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/cnrs_rvb.png" height="60" alt="Logo du Centre national de la recherche scientifique" />
+    </a>' : '';
+$f_facebook = ($RZO['facebook']) ? '
+    <a href="https://www.facebook.com/univparis/" style="display:inline-block;vertical-align:middle;">
+        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_FB_rouge.png" alt="Pictogramme Facebook" />
+    </a>' : '';
+$f_instagram = ($RZO['instagram']) ? '
+    <a href="https://www.instagram.com/univ_paris/?hl=fr" style="display:inline-block;vertical-align:middle;">
+        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Insta_rouge.png" alt="Pictogramme Instagram" />
+    </a>' : '';
+$f_twitter = ($RZO['twitter']) ? '
+    <a href="https://twitter.com/Univ_Paris" style="display:inline-block;vertical-align:middle;">
+        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Twt_rouge.png" alt="Pictogramme Twitter" />
+    </a>' : '';
+$f_youtube = ($RZO['youtube']) ? '
+    <a href="https://www.youtube.com/channel/UC5WhlXe1I_eRCtEx7cj3ZKg?fbclid=IwAR1vwGdU3uTudr9xzGkiXoNdg0tlasAeDl2lkkTP-cyEP_snhPMfdU_Oc9w" style="display:inline-block;vertical-align:middle;">
+        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Yt_rouge.png" alt="Pictogramme Youtube" />
     </a>' : '';
 
 // HTML template
@@ -46,6 +63,11 @@ $template = '<div style="font-size:11pt;font-family:\'Lucida Sans Unicode\', \'L
     ' . $f_logo_uparis . '
     ' . $f_logo_llf . '
     ' . $f_logo_cnrs . '
+    <br />
+    ' . $f_facebook . '
+    ' . $f_instagram . '
+    ' . $f_twitter . '
+    ' . $f_youtube . '
 </div>';
 
 // Download the signature file

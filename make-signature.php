@@ -29,19 +29,19 @@ $f_logo_cnrs = ($logos['cnrs']) ? '
     </a>' : '';
 $f_facebook = ($RZO['facebook']) ? '
     <a href="https://www.facebook.com/univparis/" style="display:inline-block;vertical-align:middle;">
-        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_FB_rouge.png" alt="Pictogramme Facebook" />
+        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-facebook.png" height="25" alt="Pictogramme Facebook" />
     </a>' : '';
 $f_instagram = ($RZO['instagram']) ? '
     <a href="https://www.instagram.com/univ_paris/?hl=fr" style="display:inline-block;vertical-align:middle;">
-        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Insta_rouge.png" alt="Pictogramme Instagram" />
+        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-instagram.png" height="25" alt="Pictogramme Instagram" />
     </a>' : '';
 $f_twitter = ($RZO['twitter']) ? '
     <a href="https://twitter.com/Univ_Paris" style="display:inline-block;vertical-align:middle;">
-        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Twt_rouge.png" alt="Pictogramme Twitter" />
+        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-twitter.png" height="25" alt="Pictogramme Twitter" />
     </a>' : '';
 $f_youtube = ($RZO['youtube']) ? '
     <a href="https://www.youtube.com/channel/UC5WhlXe1I_eRCtEx7cj3ZKg?fbclid=IwAR1vwGdU3uTudr9xzGkiXoNdg0tlasAeDl2lkkTP-cyEP_snhPMfdU_Oc9w" style="display:inline-block;vertical-align:middle;">
-        <img src="https://www.univ-paris-diderot.fr/sites/default/files/communication/mail/LogoMailUP/Mail_Yt_rouge.png" alt="Pictogramme Youtube" />
+        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-youtube.png" height="25" alt="Pictogramme Youtube" />
     </a>' : '';
 
 // HTML template

@@ -9,7 +9,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1>Signature mail <small class="text-muted">– Université de Paris</small></h1>
+            <h1>Signature mail <small class="text-muted">– Université Paris Cité</small></h1>
             <div class="row">
                 <div class="col-md">
                     <h2>Composition</h2>
@@ -41,7 +41,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="uparis" v-model="logoUParis" checked="checked" name="logos[uparis]" />
                                     <label class="form-check-label" for="uparis">
-                                        Université de Paris
+                                        Université Paris Cité
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -106,7 +106,7 @@
                         </div>
                         <div>Laboratoire de linguistique formelle</div>
                         <div v-show="jobTitle">{{ jobTitle }}</div>
-                        <div>Université de Paris, LLF, CNRS</div>
+                        <div>Université Paris Cité, LLF, CNRS</div>
                         <a href="http://www.llf.cnrs.fr" itemprop="url">http://www.llf.cnrs.fr</a>
                         <div v-show="telephone">
                             <strong>Tél. :</strong> <span itemprop="telephone">{{ telephone }}</span>
@@ -117,7 +117,7 @@
                     </div>
                     <figure class="figure m-0">
                         <a v-show="logoUParis" href="https://www.u-paris.fr/" target="_blank">
-                            <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-web.png" class="figure-img" height="70" alt="Logo de l’université de Paris" />
+                            <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/web-rvb-texte.png" class="figure-img" height="70" alt="Logo de l’université Paris Cité" />
                         </a>
                         <a v-show="logoLLF" href="http://www.llf.cnrs.fr" target="_blank">
                             <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/web-1024-transparent.png" class="figure-img" height="55" alt="Logo du Laboratoire de linguistique formelle" />

@@ -15,7 +15,7 @@ $f_telephone = ($telephone) ? '<strong>Tél. :</strong> <span itemprop="telephon
 $f_faxNumber = ($faxNumber) ? '<strong>Fax :</strong> <span itemprop="fax">' . $faxNumber . '</span><br />' : '';
 $f_logo_uparis = ($logos['uparis']) ? '
     <a href="https://www.u-paris.fr/" style="display:inline-block;vertical-align:middle;">
-        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/uparis-web.png" height="70" alt="Logo de l’université de Paris" />
+        <img src="http://www.llf.cnrs.fr/sites/llf.cnrs.fr/files/intranet/logos/web-rvb-texte.png" height="70" alt="Logo de l’université Paris Cité" />
     </a>' : '';
 $f_logo_llf = ($logos['llf']) ? '
     <a href="http://www.llf.cnrs.fr" style="display:inline-block;vertical-align:middle;">
@@ -52,7 +52,7 @@ $template = '<div style="font-size:11pt;font-family:\'Lucida Sans Unicode\', \'L
     <span itemprop="worksFor">Laboratoire de linguistique formelle</span>
     <br />
     ' . $f_jobTitle . '
-    <span itemprop="affiliation">Université de Paris</span>,
+    <span itemprop="affiliation">Université Paris Cité</span>,
     <span itemprop="affiliation">LLF</span>,
     <span itemprop="affiliation">CNRS</span>
     <br />
